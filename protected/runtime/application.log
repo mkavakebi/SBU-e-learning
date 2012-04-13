@@ -1,0 +1,64 @@
+2012/03/24 20:29:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "GII".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('GII')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/esbu/index.php/GII
+---
+2012/03/24 20:40:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rbam".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('rbam')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/esbu/index.php/rbam
+---
+2012/03/24 20:45:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rbam".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('rbam')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/esbu/index.php/rbam
+---
+2012/03/24 20:45:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rbam".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('rbam')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/esbu/index.php/rbam
+---
+2012/03/24 20:53:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rbam".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('rbam')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/esbu/index.php/rbam
+---
+2012/03/24 20:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rbam".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('rbam')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/esbu/index.php/rbam
+---
+2012/03/24 20:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rbam".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('rbam')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/esbu/index.php?r=rbam
+---
+2012/03/24 20:58:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rbam".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('rbam')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/esbu/index.php?r=rbam
+---
