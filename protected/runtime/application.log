@@ -62,3 +62,112 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/esbu/index.php?r=rbam
 ---
+2012/04/16 15:18:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'esbu.tbl_user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_user`.
+in D:\xampp\htdocs\esbu\protected\models\User.php (21)
+in D:\xampp\htdocs\esbu\protected\components\UserIdentity.php (13)
+in D:\xampp\htdocs\esbu\protected\models\LoginForm.php (52)
+2012/04/16 15:18:15 [error] [exception.CDbException] exception 'CDbException' with message 'The table "tbl_user" for active record class "User" cannot be found in the database.' in D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(User))
+#1 D:\xampp\htdocs\esbu\protected\models\User.php(21): CActiveRecord::model('User')
+#2 D:\xampp\htdocs\esbu\protected\components\UserIdentity.php(13): User::model()
+#3 D:\xampp\htdocs\esbu\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 D:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 D:\xampp\htdocs\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 D:\xampp\htdocs\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 D:\xampp\htdocs\esbu\protected\controllers\SiteController.php(88): CModel->validate()
+#8 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 D:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/esbu/index.php?r=site/login
+HTTP_REFERER=http://localhost/esbu/index.php?r=site/login
+---
+2012/04/16 20:04:34 [error] [exception.CException] exception 'CException' with message 'Property "User.title" is not defined.' in D:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('title')
+#1 D:\xampp\htdocs\esbu\protected\components\UserIdentity.php(21): CActiveRecord->__get('title')
+#2 D:\xampp\htdocs\esbu\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 D:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#4 D:\xampp\htdocs\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 D:\xampp\htdocs\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#6 D:\xampp\htdocs\esbu\protected\controllers\SiteController.php(88): CModel->validate()
+#7 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#12 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#13 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/esbu/index.php?r=site/login
+HTTP_REFERER=http://localhost/esbu/index.php?r=site/login
+---
+2012/04/17 13:14:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "user".' in D:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('user')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('user')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/user')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/esbu/index.php?r=site/user
+---
+2012/04/17 14:08:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/admin')
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/esbu/index.php?r=user/admin
+HTTP_REFERER=http://localhost/esbu/index.php?r=user/create
+---
+2012/04/17 14:10:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/admin')
+#9 D:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\xampp\htdocs\esbu\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/esbu/index.php?r=user/admin
+HTTP_REFERER=http://localhost/esbu/index.php?r=user/view&id=1
+---
+2012/04/17 14:12:23 [warning] [application] Failed to set unsafe attribute "name" of "User".
+in D:\xampp\htdocs\esbu\protected\controllers\UserController.php (121)
+in D:\xampp\htdocs\esbu\index.php (13)
+2012/04/17 14:21:34 [warning] [application] Failed to set unsafe attribute "name" of "User".
+in D:\xampp\htdocs\esbu\protected\controllers\UserController.php (96)
+in D:\xampp\htdocs\esbu\index.php (13)
+2012/04/17 14:50:46 [warning] [application] Failed to set unsafe attribute "title" of "User".
+in D:\xampp\htdocs\esbu\protected\controllers\UserController.php (96)
+in D:\xampp\htdocs\esbu\index.php (13)
+2012/04/17 15:09:02 [warning] [application] Failed to set unsafe attribute "title" of "User".
+in D:\xampp\htdocs\esbu\protected\controllers\UserController.php (96)
+in D:\xampp\htdocs\esbu\index.php (13)
+2012/04/17 15:10:23 [warning] [application] Failed to set unsafe attribute "title" of "User".
+in D:\xampp\htdocs\esbu\protected\controllers\UserController.php (96)
+in D:\xampp\htdocs\esbu\index.php (13)
+2012/04/17 15:10:33 [warning] [application] Failed to set unsafe attribute "title" of "User".
+in D:\xampp\htdocs\esbu\protected\controllers\UserController.php (96)
+in D:\xampp\htdocs\esbu\index.php (13)

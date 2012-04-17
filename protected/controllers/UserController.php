@@ -59,7 +59,7 @@ class UserController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionRegister()
 	{
 		$model=new User;
 
@@ -69,11 +69,12 @@ class UserController extends Controller
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];
+			$model->state=1;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
-		$this->render('create',array(
+		$this->render('register',array(
 			'model'=>$model,
 		));
 	}
