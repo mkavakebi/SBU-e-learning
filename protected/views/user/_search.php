@@ -20,6 +20,21 @@
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128)); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'title'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>50,'maxlength'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'state'); ?>
+		<?php echo $form->textField($model,'state'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'superuser'); ?>
+		<?php echo $form->textField($model,'superuser'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

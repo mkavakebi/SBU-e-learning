@@ -19,15 +19,15 @@ return array(
 	),
 
 	'modules'=>array(
+		// uncomment the following to enable the Gii tool
+		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123456',
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		‘rbam’=>array(
-			'class' => 'ext.rbam.RbamModule',
-		),
+		
 	),
 
 	// application components
@@ -45,13 +45,12 @@ return array(
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
-		),
-		*/
+		),*/
+		
 		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),*/
 		// uncomment the following to use a MySQL database
-		
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=esbu',
 			'emulatePrepare' => true,
@@ -59,7 +58,6 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
-
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
             'errorAction'=>'site/error',

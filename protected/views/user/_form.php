@@ -15,24 +15,34 @@
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
-	<?php if($showpass){?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'password'); ?>
-	</div>
-	<?php }?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'title'); ?>
-		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'title'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'email'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'title'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'title'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'state'); ?>
+		<?php echo $form->textField($model,'state'); ?>
+		<?php echo $form->error($model,'state'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'superuser'); ?>
+		<?php echo $form->textField($model,'superuser'); ?>
+		<?php echo $form->error($model,'superuser'); ?>
 	</div>
 
 	<div class="row buttons">

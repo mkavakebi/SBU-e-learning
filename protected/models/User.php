@@ -8,8 +8,13 @@
  * @property string $username
  * @property string $password
  * @property string $email
- * @property integer $state
  * @property string $title
+ * @property integer $state
+ *
+ * The followings are the available model relations:
+ * @property RStudent[] $rStudents
+ * @property RTeacher[] $rTeachers
+ * @property TblScore[] $tblScores
  */
 class User extends CActiveRecord
 {
@@ -39,11 +44,14 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, email', 'required'),
+			array('username, password, email,title', 'required'),
+			array('email', 'email'),
+			array('state', 'numerical', 'integerOnly'=>true),
 			array('username, password, email', 'length', 'max'=>128),
+			array('title', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, username, password, email,title', 'safe', 'on'=>'search'),
+			array('id, username, password, email, title, state', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,6 +63,9 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'rStudents' => array(self::HAS_MANY, 'RStudent', 'course_id'),
+			'courses_teach'=>array(self::MANY_MANY, 'Course','r_teacher(user_id, course_id)'),
+			'courses_student'=>array(self::MANY_MANY, 'Course','r_student(user_id, course_id)'),
 		);
 	}
 
@@ -67,8 +78,9 @@ class User extends CActiveRecord
 			'id' => 'ID',
 			'username' => 'Username',
 			'password' => 'Password',
-			'title' => 'Title',
 			'email' => 'Email',
+			'title' => 'Title',
+			'state' => 'State',
 		);
 	}
 
@@ -85,10 +97,24 @@ class User extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('username',$this->username,true);
+		$criteria->compare('password',$this->password,true);
 		$criteria->compare('email',$this->email,true);
+		$criteria->compare('title',$this->title,true);
+		$criteria->compare('state',$this->state);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+	
+	public function isAdmin(){
+		return ($this->superuser==1);
+	}
+	
+	/**
+	 * @return User 
+	 */
+	public static function CurrentUser(){
+		return User::model()->findByAttributes(array('username'=>Yii::app()->user->ID));
 	}
 }

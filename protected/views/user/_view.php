@@ -16,5 +16,17 @@
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
+	<?php echo CHtml::encode($data->title); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('state')); ?>:</b>
+	<?php echo CHtml::encode($data->state); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('superuser')); ?>:</b>
+	<?php echo CHtml::encode($data->superuser); ?>
+	<br />
+
 
 </div>
